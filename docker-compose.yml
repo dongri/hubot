@@ -1,0 +1,14 @@
+version: "3"
+services:
+  hubot:
+    container_name: hubot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app/src
+    logging:
+      options:
+        max-size: "500k"
+    environment:
+      - HUBOT_SLACK_TOKEN=xoxb-123456789-123456789-123456789ABCDE
